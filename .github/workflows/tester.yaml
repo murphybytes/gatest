@@ -6,6 +6,10 @@ jobs:
   do_something:
     runs-on: ubuntu-latest
     steps:
+      - uses: sigstore/cosign-installer@main
+        with:
+          cosign-release: 'v1.2'
+
       - uses: actions/checkout@v2
       - run: |
           make show
