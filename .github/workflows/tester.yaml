@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: sigstore/cosign-installer@main
         with:
-          cosign-release: 'v1.2'
+          cosign-release: 'v1.2.1'
 
       - uses: actions/checkout@v2
       - run: |
