@@ -17,10 +17,11 @@ jobs:
         env:
           MESSAGE: "hi there"
       
-      id: dotenv
-      uses: falti/dotenv-action@v0.2
-      with: 
-        path: env.xxx
+      - name: xxx
+        id: dotenv
+        uses: falti/dotenv-action@v0.2
+        with: 
+          path: env.xxx
 
       - run: |
           make show
