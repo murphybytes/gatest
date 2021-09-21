@@ -12,11 +12,6 @@ jobs:
           cosign-release: 'v1.2.1'
 
       - uses: actions/checkout@v2
-      - run: |
-          source env.xxx
-          make show
-        env:
-          MESSAGE: "hi there"
       
       - name: xxx
         id: dotenv
@@ -25,7 +20,8 @@ jobs:
           path: env.xxx
 
       - run: |
-          . env.xxx && make show
+          . env.xxx 
+          make show
 
       - name: echos
         run: |
