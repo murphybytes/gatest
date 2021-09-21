@@ -1,0 +1,12 @@
+name: Testing workflow
+on: workflow_dispatch {}
+
+jobs:
+  do_something:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          make show
+        env:
+          MESSAGE: "hi there"
+
