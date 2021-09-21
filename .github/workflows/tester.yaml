@@ -20,10 +20,11 @@ jobs:
           path: env.xxx
 
       - run: |
-          . env.xxx 
+          export $(cat env.xxx | sed 's/#.*//g' | xargs) 
           make show
+        shell: bash
 
       - name: echos
         run: |
-          echo ${{ steps.dotenv.outputs.my-tag }}
+          echo ${{ steps.dotenv.outputs.my_tag }}
           echo ${{ steps.dotenv.outputs.message }}  
