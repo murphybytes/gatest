@@ -24,6 +24,9 @@ jobs:
           path: env.xxx
 
       - run: |
-          make show
+          . env.xxx && make show
 
-       
+      - name: echos
+        run: |
+          echo ${{ steps.dotenv.outputs.my-tag }}
+          echo ${{ steps.dotenv.outputs.message }}  
